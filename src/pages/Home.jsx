@@ -16,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
 
-            const resultTask = await axios.get('/api/todos/'); 
+            const resultTask = await axios.get('http://65.2.69.52:4000/api/todos/'); 
             console.log(resultTask.data);
             setTask(resultTask.data);
         }
@@ -29,7 +29,7 @@ const Home = () => {
 
         try {
 
-            const {data} = await axios.post('/api/todos/add', {
+            const {data} = await axios.post('http://65.2.69.52:4000/api/todos/add', {
                 title
             });
             console.log(data);
